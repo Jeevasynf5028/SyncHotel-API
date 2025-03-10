@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+     <div id="box">
+        <div class="sign">
+            <h1 onclick="signInPage()" id="signInButton">Sign In</h1>
+            <h1 onclick="signUpPage()" id="signUpButton">Sign Up</h1>
+        </div>
+
+        <div id="signUp">
+            <form action="" onsubmit="submitForm(event)">
+                <input type="text" name="userName" id="userName" placeholder="UserName" required>
+                <input type="text" name="mobile" id="mobile" placeholder="MObileNumber" required>
+                <input type="text" name="Aadhar" id="aadhar" placeholder="Aadhar" required>
+                <input type="email" name="email" id="email" placeholder="UserEmail" required>
+                <input type="password" id="password1" placeholder="Password" required>
+                <input type="text" name="address" id="address" placeholder="Address" required>
+                <select id="foodType" name="foodType" placeholder="FoodType" title="Food" required>
+                    <option value="veg">Veg</option>
+                    <option value="nonveg">NonVeg</option>
+                </select>
+                <select id="gender" name="gender" placeholder="Gender" title="Gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input type="number" id="walletBalance" name="walletBalance" placeholder="Deposit Amount" min="0" required>
+                <button type="submit" value="Submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="signIn">
+            <form action="" onsubmit="signInSubmit(event)">
+                <input type="email" id="email1" placeholder="Email" required>
+                <input type="password" id="password2" placeholder="Password" required>
+                <button type="submit" value="Submit">Submit</button>
+            </form>
+
+        </div>
+
+     </div>
+     
+
+     <div id="menu">
+        <ol>
+            <li onclick="home()">Home</li>
+            <li onclick="CustomerDetails()">Customer Profile</li>
+            <li onclick="ShowRoomDetails()">Room Details</li>
+            <li onclick="RechargeWallet()">Recharge</li>
+            <li onclick="TakeRoom()">Take Rooms</li>
+            <li onclick="CartItems()">Cart Items</li>
+            <li onclick="OrderHistory()">Booking History</li>
+            <li onclick="LogOut()">Log Out</li>
+        </ol>
+    </div>
+      <div id="homePage">
+        <h1 id="welcome"></h1>
+        <div id="homebody">
+            <div id="lefthome">
+                <img src="./Images/hotel.png" alt="">
+            </div>
+            <div id="righthome">
+                <h2>Our customer service team is here to help you with any questions or concerns you may have. We look forward to providing you with the best experience possible. Please let us know if we can do anything to make your stay even better! </h2>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+    <div id="UserProfilePage">
+        <img src="./Images/avator.png" alt="">
+        <div id="user-profile-card">
+           
+            <p></p>
+        </div>
+
+    </div>
+
+    <div id="RoomProfilePage" style="display: none;">
+        <div id="roompage">
+            <div id="room-page-container">
+                <table id="room-table">
+                </table>
+            </div>
+            <div>
+                <button id="new-room-btn" onclick="NewRoomPage()">Add New Room</button><br>
+
+           
+             
+                <div id="addNewRoom" style="display: none;">
+                    <form onsubmit="addRoom(event)">
+                        <input placeholder="Enter RoomType" id="roomType" required>
+                        <input placeholder="Enter Quantity of beds" id="roomNumberOfBeds" min="0" required>
+                        <input placeholder="Enter Room Price per day" id="roomPrice" min="0" required>
+                        <input type="file" id="roomPhoto" placeholder="Room Photo" required>
+                        <button style="align-items: center;" type="submit" value="submit">Add Room</button>
+                    </form>
+                </div>
+                <div id="editRoom" style="display: none;">
+                    <form onsubmit="editRoom(event)">
+                        <input placeholder="Enter RoomType" id="editroomType" required>
+                        <input placeholder="Enter Quantity of beds" id="editroomNumberOfBeds" min="0" required>
+                        <input placeholder="Enter Room Price per day" id="editroomPrice" min="0" required>
+                        <input type="file" id="editroomPhoto" placeholder="Room Photo" required>
+                        <button type="submit" value="submit">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="walletRechargePage" style="display: none;">
+        <div id="balance-grid">
+            <div id="balance">
+                <h1 id="currentBalance">dfhjk</h1>
+            </div>
+            <span id="amountInput"><input type="number" placeholder="Enter the Amount " id="amount" min="0" required>
+                <button onclick="deposit()" id="deposit">Deposit</button></span>
+        </div>
+    </div>
+
+    <div id="TakeRoomPage">
+
+        <div id="dategetting" style="display: none;"> 
+            <p>Note: Give the From and To Data Before Add to CartItems</p>
+            <label for="">Select the From Date</label>
+            <input type="date" id="fromDate">
+            <label for="">Select the To Date</label>
+            <input type="date" id="toDate">
+            
+        </div>
+        <div id="room-container"></div>
+    </div>
+
+    <div id="CustomerCartItemsPage">
+        <div id="dateEdit" style=" display: none;"> 
+            <p>Note: Give the From and To Data Before Giving Edit</p>
+            <label for="">Select the From Date</label>
+            <input type="date" id="fromDateEdit">
+            <label for="">Select the To Date</label>
+            <input type="date" id="toDateEdit">
+            
+        </div>
+        <div id="empty-cart">
+        </div>
+        <div id="carts-price">
+            <div id="cart-item-div"></div>
+            <div id="price-details">
+                <h1 id="showTotalPrice"></h1>
+                <button id="new-order-btn" style="display: none;" onclick="PurchaseAllItems()">Purchase All Items</button>
+            </div>
+        </div>
+    </div>
+     
+
+
+    <div id="OrderHistoryPage">
+        <div id="booking-div">
+            <div id="booking-page-container">
+                <table id="booking-table">
+                </table>
+            </div>
+            <div id="bill-div">
+                <center>
+                    <div id="bill-content">
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+     <script type="module" src="dist/script.js"></script>
+
+     
+</body>
+</html>

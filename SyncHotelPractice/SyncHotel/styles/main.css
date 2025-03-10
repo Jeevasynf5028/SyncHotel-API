@@ -1,0 +1,166 @@
+
+
+/*# sourceMappingURL=main.css.map */
+
+#menu{
+    display: none;
+}
+
+#box{
+    width: 50%;
+    margin: 20vh auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    /* display: none; */
+}
+.sign{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(42, 165, 140);
+}
+#signUp{
+    padding: 20px;
+    border:2px solid rgb(95, 103, 69);
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+}
+#signIn{
+    padding: 20px;
+    border:2px solid rgb(73, 125, 192);
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+    display:none;
+}
+#signUp input,#signIn input{
+    width: 100%;
+    /* margin:2% auto; */
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-indent: 3%;
+    /* border-radius: 10px; */
+    border: 2px solid rgb(142, 236, 111);
+    /* box-shadow: 2px 2px 2px gray; */
+
+}
+#homePage {
+    display: flex;
+    background-color: antiquewhite;
+    display: none;
+}
+
+#menu {
+    display: none;
+    width: 100%;
+}
+
+#menu ol {
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(58, 70, 174);
+    padding: 14px;
+    /* border-radius: 10px; */
+}
+
+#menu ol li {
+    padding: 10px;
+    /* border-radius: 10px; */
+}
+
+#menu ol li:hover {
+    background-color: lightskyblue;
+    color: black;
+    cursor: pointer;
+}
+#room-table img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+#dategetting{
+    background-color: antiquewhite;
+}
+
+#homebody{
+    display: flex;
+    flex-direction: row;
+}
+
+.room{
+    display: flex;
+    width: 95%;
+    background-color: rgb(212, 216, 197);
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    border: 2px solid black;
+}
+.room button{
+    /* width: 20px; */
+    height: 50px;
+
+}
+
+#UserProfilePage{
+    display: none;
+}
+
+
+#room-table th, #room-table td{
+    border: 1px solid black;
+    padding: 1px;
+}
+
+#booking-table td, #booking-table th{
+    border: 1px solid black;
+    /* padding: 5px; */
+    background-color: rgb(229, 226, 200);
+}
+
+#room-table img{
+    /* width: 100%; */
+    height: auto;
+    width: 100px;
+}
+
+#room-table td{
+    text-align: center;
+    color: #333;
+    min-height: 70vh;
+}
+
+#room-table
+{
+    margin: 0 auto;
+    width: 70%;
+    border-collapse: collapse;
+    background-color: rgb(156, 161, 210);
+}
+
+#balance-grid{
+    
+    background-color: antiquewhite;
+}
+#booking-page-container{
+    display: flex;
+    flex-direction: column;
+}
+.cart{
+    display: flex;
+    flex-direction: row;
+    background-color: beige;
+}
+#dategetting, #dateEdit{
+    background-color: rgb(225, 72, 72);
+    color: white;
+    border: 2px;
+    border-radius: 5px;
+    min-height: 80px;
+    /* height: 100px; */
+}
